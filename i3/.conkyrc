@@ -47,7 +47,7 @@ override_utf8_locale no
 
 ## number of cpu samples to average
 ## set to 1 to disable averaging
-cpu_avg_samples 2
+cpu_avg_samples 1
 
 ## Sensors examples
 # Top Process: ${top name 1}
@@ -75,13 +75,13 @@ ${if_up eth0} ${addr eth0} | ${endif}\
 # Wireless status
 ${if_up wlan0} ${addr wlan0} | ${endif}\
 # CPU stats
- ${cpu cpu1}% ${freq_g 1}GHz ${exec sensors | grep -m 1 "Core 0"|awk '{print $3}'}   ${memperc}%  ${swapperc}%| \
-#Battery
+${color red} ${color #00ff00} ${cpu cpu1}% ${freq_g 1}GHz ${exec sensors | grep -m 1 "Core 0"|awk '{print $3}'}   ${memperc}%  ${swapperc}%| \
+#Battery$
  ${pb_battery percent} | \
 #Date&Time
 ${time %a %d.%m.%y} ${time %H:%M} | \
 # Volume %
- ${mixer} %| \
+# ${mixer} %| \
 #CPU Temp
 #${color #42AE4A}Core 0 Temp: ${color lightgrey}${exec sensors | grep 'Core 0' | cut -c18-21}| \
 

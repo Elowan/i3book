@@ -1,11 +1,9 @@
-### Conky configuration file
-## JSON Output is printed to the console -> i3bar
-# Modified: 27.11.2011 - mseed : http://www.fastlinux.eu
-
-### 
-# use_xft yes
-# xftfont Helvetica:size=15
-# xftalpha 0.9
+# Conky configuration file
+# JSON Output is routed to i3bar
+# ++++++++++++++++++++++++++++++++ 
+# ++++ by ELOWAN in 2016-01-08 +++ 
+# ++++++++++++++++++++++++++++++++ 
+# ! needs 'Font Awesome to be installed !
 
 ## No output to X <yes/no>
 out_to_x no
@@ -65,7 +63,8 @@ cpu_avg_samples 1
 # Name: $nodename - $sysname
 # Battery: ${battery_percent BAT0}%
 
-## Stuff after 'TEXT' will be formatted on screen
+### Stuff after 'TEXT' will be formatted on screen
+
 TEXT
 
 # Free space on /home
@@ -80,9 +79,9 @@ ${color red} ${color #00ff00} ${cpu cpu1}% ${freq_g 1}GHz ${exec sensors | gr
  ${pb_battery percent} | \
 #Date&Time
 ${time %a %d.%m.%y} ${time %H:%M} | \
-# Volume %
+# Volume % DOES NOT WORK RIGHT NOW
 # ${mixer} %| \
-#CPU Temp
+#CPU Temp DOES NOT WORK RIGHT NOW
 #${color #42AE4A}Core 0 Temp: ${color lightgrey}${exec sensors | grep 'Core 0' | cut -c18-21}| \
 
 

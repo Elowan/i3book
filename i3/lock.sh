@@ -5,7 +5,7 @@
 #++++ by ELOWAN in 2016-01-08 +++
 #++++++++++++++++++++++++++++++++
 #
-# If i3lock is called, a screenshot via scrot is taken and modified with imagemagic-fx
+# If i3lock is called, a screenshot via 'scrot' is taken and modified with 'imagemagic'
 # and of course, guess what - the screen gets locked!
 
 # Take a Screenshot
